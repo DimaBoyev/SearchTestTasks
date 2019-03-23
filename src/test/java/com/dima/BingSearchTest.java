@@ -38,14 +38,10 @@ public class BingSearchTest {
         String [] words = splitStringToWords(searchPhrase);
         List<String> searchResult = getGoogleSearchResult(pages);
         for (String el: searchResult) {
-            System.out.println(searchResult.size());
+            //System.out.println(searchResult.size());
             for (int i = 0; i < words.length; i++) {
                 assertTrue("Error: \n" + el.toLowerCase() + "' doesn't contain\n" + words[i].toLowerCase(), el.toLowerCase().contains(words[i].toLowerCase()));
             }
-            //System.out.println(searchResult.size());
-            //System.out.println(el);
-            //System.out.println(el.findElement(By.cssSelector(".r")).getText());
-            //assertTrue(el.getText().toLowerCase().contains(searchPhrase.toLowerCase()));
         }
     }
 
